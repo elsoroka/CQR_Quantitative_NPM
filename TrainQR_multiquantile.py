@@ -111,7 +111,8 @@ class TrainQR():
 
 			for i in range(bat_per_epo):
 				# Select a minibatch
-				state, rob, sign, b_ix = self.dataset.generate_mini_batches(batch_size)
+				#state, rob, sign, b_ix = self.dataset.generate_mini_batches(batch_size)
+				state, rob = self.dataset.generate_mini_batches(batch_size)
 				Xt = Variable(FloatTensor(state))
 				Tt = Variable(FloatTensor(rob))
 				
